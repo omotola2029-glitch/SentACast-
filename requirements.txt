@@ -1,0 +1,14 @@
+streamlit
+pandas
+nltk
+vaderSentiment
+prophet
+scikit-learn
+matplotlib
+plotly
+python-pptx
+reportlab
+openpyxl
+python-docx
+wordcloud
+kaleido
