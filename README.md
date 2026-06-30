@@ -1,6 +1,6 @@
 # SentACast
 
-**AI-powered sentiment analysis and trend forecasting for e-commerce product reviews, with a human in the loop.**
+**AI-powered sentiment analysis and trend forecasting for e-commerce product reviews, with a human in the loop module.**
 
 SentACast combines automated sentiment scoring, human review, and time-series forecasting in a single interactive dashboard. It was built so small and medium e-commerce businesses can understand what customers are saying about their products *and* where that sentiment is headed, without needing a data science team or expensive tooling.
 
