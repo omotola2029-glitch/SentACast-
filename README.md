@@ -55,7 +55,7 @@ The dashboard opens automatically in your browser. Upload a CSV of reviews (or u
 
 ## Background
 
-This project was developed as a final year dissertation for a BSc in Computer Science at the National Open University of Nigeria (NOUN). It draws on a systematic literature review of 54 studies across sentiment analysis, time-series forecasting, and human-AI collaboration to ground the system design in established research.
+This project was developed as a final year thesis for a BSc in Computer Science at the National Open University of Nigeria (NOUN). It draws on a systematic literature review of 54 studies across sentiment analysis, time-series forecasting, and human-AI collaboration to ground the system design in established research.
 
 ## License
 
