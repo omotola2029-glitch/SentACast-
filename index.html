@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Omotola Amodu | AI/ML • Data Science • Fintech</title>
+
+  <meta name="description" content="Omotola Amodu — Computer Science graduate exploring AI/ML, data science and fintech.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Roboto, Helvetica, Arial, sans-serif;
+      background: #f8f9fb;
+      color: #17202a;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1080px, 90%);
+      margin: auto;
+    }
+
+    /* Navigation */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(248, 249, 251, 0.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .nav-inner {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 1.1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 26px;
+      font-size: 0.92rem;
+      color: #5f6b76;
+    }
+
+    .nav-links a:hover {
+      color: #111827;
+    }
+
+    /* Hero */
+
+    .hero {
+      padding: 110px 0 90px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #4b5563;
+      margin-bottom: 18px;
+      letter-spacing: 0.03em;
+    }
+
+    .hero h1 {
+      max-width: 850px;
+      font-size: clamp(2.7rem, 7vw, 5.2rem);
+      line-height: 1.03;
+      letter-spacing: -0.055em;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 span {
+      color: #5b4bb7;
+    }
+
+    .hero p {
+      max-width: 720px;
+      font-size: 1.15rem;
+      color: #59636e;
+      margin-bottom: 32px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 11px 18px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.92rem;
+      border: 1px solid #d8dce2;
+      transition: 0.2s ease;
+    }
+
+    .button.primary {
+      background: #17202a;
+      color: white;
+      border-color: #17202a;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    /* Sections */
+
+    section {
+      padding: 78px 0;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    .section-label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 800;
+      color: #6b7280;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: clamp(1.9rem, 4vw, 2.7rem);
+      line-height: 1.15;
+      letter-spacing: -0.035em;
+      margin-bottom: 25px;
+    }
+
+    .section-intro {
+      max-width: 730px;
+      color: #5f6b76;
+      font-size: 1.05rem;
+    }
+
+    /* About */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 55px;
+      align-items: start;
+    }
+
+    .about-text p {
+      margin-bottom: 16px;
+      color: #4f5964;
+    }
+
+    .facts {
+      display: grid;
+      gap: 12px;
+    }
+
+    .fact {
+      padding: 17px 18px;
+      background: white;
+      border: 1px solid #e3e6ea;
+      border-radius: 10px;
+    }
+
+    .fact strong {
+      display: block;
+      font-size: 0.9rem;
+      margin-bottom: 2px;
+    }
+
+    .fact span {
+      color: #68737e;
+      font-size: 0.9rem;
+    }
+
+    /* Featured Project */
+
+    .project {
+      background: white;
+      border: 1px solid #dfe3e8;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 12px 35px rgba(20, 25, 35, 0.05);
+    }
+
+    .project-image {
+      width: 100%;
+      display: block;
+      max-height: 500px;
+      object-fit: cover;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .project-content {
+      padding: 34px;
+    }
+
+    .project-title {
+      font-size: 1.7rem;
+      margin-bottom: 10px;
+      letter-spacing: -0.025em;
+    }
+
+    .project-description {
+      color: #59636e;
+      max-width: 760px;
+      margin-bottom: 22px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 25px;
+    }
+
+    .tag {
+      background: #f0f1f4;
+      color: #4b5563;
+      padding: 5px 10px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 650;
+    }
+
+    .results {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 25px 0;
+    }
+
+    .result {
+      padding: 18px;
+      background: #f8f9fb;
+      border-radius: 10px;
+      border: 1px solid #e7e9ed;
+    }
+
+    .result strong {
+      display: block;
+      font-size: 1.35rem;
+      margin-bottom: 2px;
+    }
+
+    .result span {
+      color: #68737e;
+      font-size: 0.78rem;
+    }
+
+    /* Learning */
+
+    .learning-card {
+      background: #17202a;
+      color: white;
+      padding: 36px;
+      border-radius: 16px;
+    }
+
+    .learning-card p {
+      color: #c8ced5;
+      max-width: 760px;
+      margin-bottom: 22px;
+    }
+
+    .learning-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .learning-item {
+      padding: 8px 13px;
+      border: 1px solid #46505c;
+      border-radius: 999px;
+      font-size: 0.83rem;
+    }
+
+    /* Other work */
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #e1e4e8;
+      border-radius: 12px;
+      padding: 25px;
+    }
+
+    .card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 7px;
+    }
+
+    .card .date {
+      font-size: 0.8rem;
+      color: #7a838c;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #5f6974;
+      font-size: 0.93rem;
+    }
+
+    /* Direction */
+
+    .direction {
+      max-width: 780px;
+    }
+
+    .direction p {
+      color: #59636e;
+      font-size: 1.05rem;
+      margin-bottom: 18px;
+    }
+
+    /* Contact */
+
+    .contact {
+      text-align: center;
+      padding-bottom: 95px;
+    }
+
+    .contact p {
+      max-width: 600px;
+      margin: 0 auto 25px;
+      color: #68737e;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    /* Footer */
+
+    footer {
+      border-top: 1px solid #e5e7eb;
+      padding: 25px 0;
+      color: #7a838c;
+      font-size: 0.8rem;
+      text-align: center;
+    }
+
+    /* Mobile */
+
+    @media (max-width: 760px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding: 75px 0 65px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .results {
+        grid-template-columns: 1fr;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .project-content {
+        padding: 24px;
+      }
+
+      section {
+        padding: 60px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="container nav-inner">
+      <a href="#" class="logo">Omotola Amodu</a>
+
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#project">Project</a>
+        <a href="#learning">Learning</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="container">
+
+      <div class="eyebrow">
+        COMPUTER SCIENCE · AI/ML · DATA · FINTECH
+      </div>
+
+      <h1>
+        Building at the intersection of
+        <span>technology and finance.</span>
+      </h1>
+
+      <p>
+        I'm Omotola Amodu, a Computer Science graduate exploring how
+        machine learning can be applied to practical problems in finance
+        and beyond.
+      </p>
+
+      <div class="buttons">
+        <a
+          href="https://github.com/omotola2029-glitch"
+          target="_blank"
+          class="button primary">
+          View GitHub
+        </a>
+
+        <a
+          href="https://linkedin.com/in/omotola-amodu"
+          target="_blank"
+          class="button">
+          LinkedIn
+        </a>
+
+        <a
+          href="#project"
+          class="button">
+          View My Project
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+
+      <div class="section-label">About me</div>
+
+      <div class="about-grid">
+
+        <div class="about-text">
+
+          <h2>Curious about how things work — and how they could work better.</h2>
+
+          <p>
+            I graduated from the National Open University of Nigeria in
+            April 2026 with a BSc in Computer Science, finishing as the
+            Best Graduating Student in my department.
+          </p>
+
+          <p>
+            My interests have increasingly moved toward artificial
+            intelligence, machine learning and data science, particularly
+            their application to financial problems.
+          </p>
+
+          <p>
+            I'm also developing professional accounting expertise through
+            ICAN. Combining technology with financial knowledge has led me
+            toward a career goal focused on AI/ML and fintech.
+          </p>
+
+          <p>
+            Outside technical work, I founded The Graduate Circle, a
+            peer community helping recent graduates find direction,
+            accountability and opportunities as they navigate their
+            early careers.
+          </p>
+
+        </div>
+
+
+        <div class="facts">
+
+          <div class="fact">
+            <strong>Education</strong>
+            <span>BSc Computer Science · April 2026</span>
+          </div>
+
+          <div class="fact">
+            <strong>Academic Achievement</strong>
+            <span>Best Graduating Student · Computer Science</span>
+          </div>
+
+          <div class="fact">
+            <strong>Current Focus</strong>
+            <span>AI/ML · Data Science · Financial Applications</span>
+          </div>
+
+          <div class="fact">
+            <strong>Scholarship</strong>
+            <span>Tech4Africans AI/ML Track · 2026</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Featured Project -->
+  <section id="project">
+    <div class="container">
+
+      <div class="section-label">Featured project</div>
+
+      <h2>Something I've built.</h2>
+
+      <div class="project">
+
+        <!--
+          IMPORTANT:
+          If your image does not appear, replace
+          "sentacast.png" with the exact filename/path
+          of the screenshot in your repository.
+        -->
+
+        <img
+          src="sentacast.png"
+          alt="SentACast dashboard"
+          class="project-image"
+        >
+
+        <div class="project-content">
+
+          <h3 class="project-title">
+            SentACast
+          </h3>
+
+          <p class="project-description">
+            An AI-powered sentiment analysis and trend forecasting
+            system for e-commerce product reviews. SentACast combines
+            natural language processing, sentiment analysis,
+            time-series forecasting and Human-in-the-Loop validation
+            to make automated predictions more reliable.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">VADER</span>
+            <span class="tag">Prophet</span>
+            <span class="tag">NLP</span>
+            <span class="tag">Streamlit</span>
+            <span class="tag">Machine Learning</span>
+          </div>
+
+
+          <div class="results">
+
+            <div class="result">
+              <strong>68.75%</strong>
+              <span>Accuracy before validation</span>
+            </div>
+
+            <div class="result">
+              <strong>81.25%</strong>
+              <span>Accuracy after validation</span>
+            </div>
+
+            <div class="result">
+              <strong>18.18%</strong>
+              <span>Relative improvement</span>
+            </div>
+
+          </div>
+
+
+          <a
+            href="https://github.com/omotola2029-glitch/SentACast-"
+            target="_blank"
+            class="button primary">
+            View Project on GitHub →
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Current Learning -->
+  <section id="learning">
+    <div class="container">
+
+      <div class="section-label">Currently learning</div>
+
+      <div class="learning-card">
+
+        <h2>
+          Going deeper into AI & machine learning.
+        </h2>
+
+        <p>
+          In July 2026, I won a Tech4Africans Scholarship through
+          TechCrush under the AI/ML track. I'm currently building my
+          practical machine learning skills and exploring how these
+          techniques can be applied to real-world problems.
+        </p>
+
+        <div class="learning-list">
+          <span class="learning-item">Supervised Learning</span>
+          <span class="learning-item">Unsupervised Learning</span>
+          <span class="learning-item">K-Means Clustering</span>
+          <span class="learning-item">Data Science</span>
+          <span class="learning-item">Python</span>
+          <span class="learning-item">Predictive Analytics</span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Other Work -->
+  <section id="work">
+    <div class="container">
+
+      <div class="section-label">Beyond my featured project</div>
+
+      <h2>Learning, building and creating community.</h2>
+
+      <div class="cards">
+
+        <div class="card">
+
+          <h3>
+            The Graduate Circle
+          </h3>
+
+          <div class="date">
+            Founder & Community Lead · July 2026–Present
+          </div>
+
+          <p>
+            Founded a peer community for recent graduates focused on
+            accountability, career direction and shared opportunities.
+            The community brings graduates together to learn, share
+            opportunities and navigate early careers together.
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <h3>
+            Machine Learning for Financial Fraud Detection
+          </h3>
+
+          <div class="date">
+            Seminar · January 2026
+          </div>
+
+          <p>
+            Presented machine learning approaches to financial fraud
+            detection, exploring how AI can be applied to identifying
+            patterns associated with financial crime.
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <h3>
+            ICT & Networking
+          </h3>
+
+          <div class="date">
+            NOUN ICT Directorate · 2025
+          </div>
+
+          <p>
+            Gained practical experience in hardware support, LAN
+            troubleshooting, DHCP, IP configuration, Cisco Packet Tracer
+            and Ethernet cable crimping.
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <h3>
+            What I'm exploring next
+          </h3>
+
+          <div class="date">
+            AI/ML · Finance · Content
+          </div>
+
+          <p>
+            Building toward practical AI/ML projects in fintech and
+            preparing to share my learning journey through beginner-friendly
+            technology content on TikTok and YouTube.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Career Direction -->
+  <section>
+    <div class="container">
+
+      <div class="section-label">Direction</div>
+
+      <div class="direction">
+
+        <h2>
+          Technology should solve problems people actually have.
+        </h2>
+
+        <p>
+          I'm particularly interested in the intersection of machine
+          learning and finance — from fraud detection and predictive
+          analytics to building systems that make financial information
+          more useful and accessible.
+        </p>
+
+        <p>
+          My long-term goal is to combine my background in Computer
+          Science and accounting to build practical technology for
+          financial systems while sharing what I learn with others
+          entering tech.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+
+    <div class="container">
+
+      <div class="section-label">Let's connect</div>
+
+      <h2>I'm learning, building and figuring out what's next.</h2>
+
+      <p>
+        I'm always interested in connecting with people working,
+        learning or building in AI, data, finance and technology.
+      </p>
+
+      <div class="contact-links">
+
+        <a
+          href="mailto:omotola2029@gmail.com"
+          class="button primary">
+          Email Me
+        </a>
+
+        <a
+          href="https://linkedin.com/in/omotola-amodu"
+          target="_blank"
+          class="button">
+          LinkedIn
+        </a>
+
+        <a
+          href="https://github.com/omotola2029-glitch"
+          target="_blank"
+          class="button">
+          GitHub
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      © 2026 Omotola Chidinma Amodu · Built with HTML & CSS · Hosted on GitHub Pages
+    </div>
+  </footer>
+
+</body>
+          </html>
