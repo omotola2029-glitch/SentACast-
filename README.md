@@ -57,6 +57,26 @@ The dashboard opens automatically in your browser. Upload a CSV of reviews (or u
 
 This project was developed as a final year thesis for a BSc in Computer Science at the National Open University of Nigeria (NOUN). It draws on a systematic literature review of 54 studies across sentiment analysis, time-series forecasting, and human-AI collaboration to ground the system design in established research.
 
-## License
+## Applications
 
-MIT
+This system is designed for:
+E-commerce platforms — Monitor customer satisfaction trends
+Businesses & SMEs — Make data-driven decisions from customer feedback
+Data scientists — Reference implementation of sentiment + forecasting pipeline
+Researchers — Study human-in-the-loop machine learning systems
+## Limitations & Future Work
+## Current Limitations:
+Trained on English-language reviews only
+Does not train new sentiment models (uses pre-trained VADER)
+Limited to historical data provided by users
+## Future Enhancements:
+Fine-tuned transformer models (BERT, DistilBERT) for higher accuracy
+Integration with live e-commerce APIs
+Advanced NLP for sarcasm and context detection
+Deployed web version for accessibility
+## Acknowledgments
+Facebook's Prophet Team
+NLTK & Streamlit communities
+
+## License
+This project is open source and available under the MIT License.
